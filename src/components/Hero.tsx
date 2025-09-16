@@ -18,19 +18,20 @@ const Hero: React.FC<HeroProps> = ({ onExploreMenu }) => {
   };
 
   return (
-    <section className="relative bg-blackboard py-20 px-4">
+        <section className="relative bg-gradient-blue py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl md:text-6xl font-blackboard font-bold text-chalk-bold mb-6 animate-fade-in">
+        <h1 className="text-5xl md:text-6xl font-inter font-bold text-white mb-6 animate-fade-in">
          Fresh & Energizing
-          <span className="block text-accent-green mt-2">Pick-Me-Up</span>
+          <span className="block text-yellow-400 mt-2">Pick-Me-Up</span>
         </h1>
-        <p className="text-xl text-chalk mb-8 max-w-2xl mx-auto animate-slide-up font-chalk">
-          Delicious Fried Rice, Hotdog Sandwiches, Crispy Fries & More!
-        </p>
+            <p className="text-xl text-white mb-8 max-w-2xl mx-auto animate-slide-up font-inter">
+              The Perfect Pick-Me-Up, Every Time! A refreshing and energizing drink that help you feel
+              revitalized and ready to take on your day!
+            </p>
         <div className="flex justify-center">
           <button 
             onClick={handleExploreMenu}
-            className="btn-chalk px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 font-chalk text-lg"
+            className="btn-primary px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 font-inter text-lg"
           >
             Explore Menu
           </button>

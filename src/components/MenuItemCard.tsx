@@ -92,20 +92,20 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
 
   return (
     <>
-      <div className={`card-chalk rounded-xl hover:shadow-lg transition-all duration-300 overflow-hidden group animate-scale-in ${!item.available ? 'opacity-60' : ''}`}>
+      <div className={`card-primary rounded-xl hover:shadow-lg transition-all duration-300 overflow-hidden group animate-scale-in ${!item.available ? 'opacity-60' : ''}`}>
         {item.popular && (
-          <div className="bg-accent-yellow text-blackboard-900 text-xs font-bold px-3 py-1 rounded-full absolute top-4 right-4 z-10 font-chalk">
+          <div className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full absolute top-4 right-4 z-10 font-inter">
             Popular
           </div>
         )}
         
         {!item.available && (
-          <div className="bg-accent-red text-chalk text-xs font-bold px-3 py-1 rounded-full absolute top-4 left-4 z-10 font-chalk">
+          <div className="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full absolute top-4 left-4 z-10 font-inter">
             Unavailable
           </div>
         )}
         
-        <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-blackboard-700 to-blackboard-600 relative">
+        <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-gray-200 to-gray-300 relative">
           {item.image ? (
             <img
               src={item.image}
@@ -129,21 +129,21 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
         </div>
         
         <div className="p-6">
-          <h4 className="text-xl font-blackboard font-bold text-chalk-bold mb-2">{item.name}</h4>
-          <p className={`text-sm mb-4 leading-relaxed font-chalk ${!item.available ? 'text-chalk-400' : 'text-chalk'}`}>
+            <h4 className="text-xl font-inter font-bold text-black mb-2">{item.name}</h4>
+            <p className={`text-sm mb-4 leading-relaxed font-inter ${!item.available ? 'text-gray-400' : 'text-gray-700'}`}>
             {!item.available ? 'Currently Unavailable' : item.description}
           </p>
           
           <div className="flex items-center justify-between mb-4">
             <div>
-              <span className="text-lg font-bold text-chalk-bold">
+              <span className="text-lg font-bold text-black">
                 ₱{item.basePrice}
                 {item.variations && item.variations.length > 0 && (
-                  <span className="text-sm text-chalk-400 ml-1 font-chalk">starting</span>
+                  <span className="text-sm text-gray-500 ml-1 font-inter">starting</span>
                 )}
               </span>
               {item.variations && item.variations.length > 0 && (
-                <div className="text-xs text-chalk-400 mt-1 font-chalk">
+                <div className="text-xs text-gray-500 mt-1 font-inter">
                   {item.variations.length} size{item.variations.length > 1 ? 's' : ''} available
                 </div>
               )}
@@ -152,29 +152,29 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
             {!item.available ? (
               <button
                 disabled
-                className="bg-blackboard-600 text-chalk-400 px-6 py-2 rounded-full cursor-not-allowed font-chalk"
+                  className="bg-gray-400 text-gray-600 px-6 py-2 rounded-full cursor-not-allowed font-inter"
               >
                 Unavailable
               </button>
             ) : quantity === 0 ? (
               <button
                 onClick={handleAddToCart}
-                className="btn-chalk px-6 py-2 rounded-full transition-all duration-200 transform hover:scale-105 font-chalk"
+                className="btn-primary px-6 py-2 rounded-full transition-all duration-200 transform hover:scale-105 font-inter"
               >
                 {item.variations?.length || item.addOns?.length ? 'Customize' : 'Add to Cart'}
               </button>
             ) : (
-              <div className="flex items-center space-x-3 bg-blackboard-600 rounded-full p-1">
+              <div className="flex items-center space-x-3 bg-gray-100 rounded-full p-1">
                 <button
                   onClick={handleDecrement}
-                  className="p-2 hover:bg-blackboard-500 rounded-full transition-colors duration-200 text-chalk"
+                  className="p-2 hover:bg-gray-200 rounded-full transition-colors duration-200 text-gray-700"
                 >
                   <Minus className="h-4 w-4" />
                 </button>
-                <span className="font-bold text-chalk-bold min-w-[24px] text-center font-chalk">{quantity}</span>
+                <span className="font-bold text-black min-w-[24px] text-center font-inter">{quantity}</span>
                 <button
                   onClick={handleIncrement}
-                  className="p-2 hover:bg-blackboard-500 rounded-full transition-colors duration-200 text-chalk"
+                  className="p-2 hover:bg-gray-200 rounded-full transition-colors duration-200 text-gray-700"
                 >
                   <Plus className="h-4 w-4" />
                 </button>
@@ -183,7 +183,7 @@ const MenuItemCard: React.FC<MenuItemCardProps> = ({
           </div>
 
           {item.addOns && item.addOns.length > 0 && (
-            <div className="text-xs text-chalk-400 font-chalk">
+              <div className="text-xs text-gray-500 font-inter">
               {item.addOns.length} add-on{item.addOns.length > 1 ? 's' : ''} available
             </div>
           )}
