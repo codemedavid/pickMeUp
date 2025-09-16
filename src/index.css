@@ -1,47 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Caveat:wght@400;500;600;700&family=Fredoka+One:wght@400&family=Comic+Neue:wght@300;400;700&family=Schoolbell&family=Walter+Turncoat&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Nom Sum Custom Styles */
-.bg-cream-50 {
-  background-color: #fefce8;
+/* Pick-Me-Up Blackboard Theme */
+
+/* Classroom Blackboard Background */
+.bg-blackboard {
+  background-color: #1a4d3a;
+  background-image: 
+    /* Chalk dust and eraser marks */
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 25% 70%, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 75% 80%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.01) 2px, transparent 2px),
+    /* Subtle blackboard texture */
+    linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.1) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.1) 75%);
+  background-size: 
+    20px 20px, 
+    25px 25px, 
+    30px 30px, 
+    22px 22px, 
+    40px 40px,
+    4px 4px,
+    4px 4px,
+    4px 4px,
+    4px 4px;
+  background-position: 
+    0 0, 
+    10px 10px, 
+    5px 5px, 
+    15px 15px, 
+    20px 20px,
+    0 0,
+    2px 2px,
+    2px 2px,
+    0 0;
 }
 
-.bg-cream-100 {
-  background-color: #fef3c7;
+/* Authentic Chalk Text Effects */
+.text-chalk {
+  color: #f1f3f4;
+  text-shadow: 
+    /* Multiple chalk dust shadows for grainy effect */
+    1px 1px 0 rgba(255, 255, 255, 0.4),
+    2px 2px 0 rgba(255, 255, 255, 0.2),
+    3px 3px 0 rgba(255, 255, 255, 0.1),
+    4px 4px 2px rgba(0, 0, 0, 0.3),
+    /* Chalk glow effect */
+    0 0 3px rgba(255, 255, 255, 0.3),
+    0 0 6px rgba(255, 255, 255, 0.2),
+    0 0 9px rgba(255, 255, 255, 0.1);
+  font-family: 'Schoolbell', cursive;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
-.bg-cream-200 {
-  background-color: #fde68a;
+.text-chalk-bold {
+  color: #ffffff;
+  text-shadow: 
+    /* Enhanced chalk dust shadows */
+    1px 1px 0 rgba(255, 255, 255, 0.5),
+    2px 2px 0 rgba(255, 255, 255, 0.3),
+    3px 3px 0 rgba(255, 255, 255, 0.2),
+    4px 4px 0 rgba(255, 255, 255, 0.1),
+    5px 5px 3px rgba(0, 0, 0, 0.4),
+    /* Stronger chalk glow */
+    0 0 4px rgba(255, 255, 255, 0.4),
+    0 0 8px rgba(255, 255, 255, 0.3),
+    0 0 12px rgba(255, 255, 255, 0.2),
+    0 0 16px rgba(255, 255, 255, 0.1);
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
-.border-cream-200 {
-  border-color: #fde68a;
+/* Classroom Chalk Button Styles */
+.btn-chalk {
+  background: linear-gradient(145deg, #2d4a3a, #1a4d3a);
+  border: 3px solid #4a6b5a;
+  color: #f1f3f4;
+  text-shadow: 
+    1px 1px 0 rgba(255, 255, 255, 0.3),
+    2px 2px 0 rgba(255, 255, 255, 0.2),
+    3px 3px 2px rgba(0, 0, 0, 0.4);
+  font-family: 'Schoolbell', cursive;
+  font-weight: 400;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-.border-cream-300 {
-  border-color: #fcd34d;
+.btn-chalk:hover {
+  background: linear-gradient(145deg, #3d5a4a, #2a5d4a);
+  border-color: #5a7b6a;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(255, 255, 255, 0.15),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hover\:bg-cream-50:hover {
-  background-color: #fefce8;
+.btn-chalk:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.hover\:bg-cream-100:hover {
-  background-color: #fef3c7;
+/* Classroom Chalk Input Styles */
+.input-chalk {
+  background: rgba(26, 77, 58, 0.8);
+  border: 3px solid #4a6b5a;
+  color: #f1f3f4;
+  font-family: 'Schoolbell', cursive;
+  text-shadow: 
+    1px 1px 0 rgba(255, 255, 255, 0.2),
+    2px 2px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.05);
 }
 
-.hover\:bg-cream-200:hover {
-  background-color: #fde68a;
+.input-chalk:focus {
+  border-color: #6bbf8a;
+  box-shadow: 
+    0 0 0 3px rgba(107, 191, 138, 0.3),
+    0 0 15px rgba(107, 191, 138, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-.hover\:border-cream-400:hover {
-  border-color: #fbbf24;
+/* Classroom Chalk Card Styles */
+.card-chalk {
+  background: rgba(26, 77, 58, 0.9);
+  border: 3px solid #4a6b5a;
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-.focus\:ring-cream-500:focus {
-  --tw-ring-color: #f59e0b;
+.card-chalk::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px, 25px 25px;
+  pointer-events: none;
+  border-radius: inherit;
 }
+
+/* Chalk Accent Colors */
+.text-accent-green { color: #4ade80; }
+.text-accent-yellow { color: #fbbf24; }
+.text-accent-red { color: #ef4444; }
+.text-accent-blue { color: #3b82f6; }
+.text-accent-orange { color: #f97316; }
 
 /* Hide scrollbar for mobile nav */
 .scrollbar-hide {

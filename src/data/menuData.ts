@@ -1,218 +1,342 @@
 import { MenuItem } from '../types';
 
 export const menuData: MenuItem[] = [
-  // Dim Sum
+  // Fried Rice Fiesta
   {
-    id: 'har-gow',
-    name: 'Har Gow (Shrimp Dumplings)',
-    description: 'Delicate translucent dumplings filled with fresh shrimp and bamboo shoots',
-    basePrice: 180,
-    category: 'dim-sum',
+    id: 'fried-rice-fiesta',
+    name: 'Fried Rice Fiesta',
+    description: 'Delicious fried rice with your choice of toppings - perfectly seasoned and made fresh to order',
+    basePrice: 59,
+    category: 'fried-rice',
     popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'siu-mai',
-    name: 'Siu Mai (Pork & Shrimp Dumplings)',
-    description: 'Traditional open-topped dumplings with pork, shrimp, and mushrooms',
-    basePrice: 160,
-    category: 'dim-sum',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'char-siu-bao',
-    name: 'Char Siu Bao (BBQ Pork Buns)',
-    description: 'Fluffy steamed buns filled with sweet and savory BBQ pork',
-    basePrice: 140,
-    category: 'dim-sum',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'xiao-long-bao',
-    name: 'Xiao Long Bao (Soup Dumplings)',
-    description: 'Delicate dumplings filled with pork and savory broth',
-    basePrice: 220,
-    category: 'dim-sum',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'cheung-fun',
-    name: 'Cheung Fun (Rice Noodle Rolls)',
-    description: 'Silky rice noodle rolls with choice of shrimp, beef, or char siu',
-    basePrice: 180,
-    category: 'dim-sum',
-    variations: [
-      { id: 'shrimp', name: 'Shrimp', price: 0 },
-      { id: 'beef', name: 'Beef', price: 20 },
-      { id: 'char-siu', name: 'Char Siu', price: 15 }
-    ],
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'turnip-cake',
-    name: 'Lo Bak Go (Turnip Cake)',
-    description: 'Pan-fried radish cake with Chinese sausage and dried shrimp',
-    basePrice: 120,
-    category: 'dim-sum',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+    available: true,
+    addOns: [
+      { id: 'tj-jumbo-hotdog', name: 'TJ Jumbo Hotdog', price: 20, category: 'toppings' },
+      { id: 'pork-siomai', name: 'Pork Siomai', price: 25, category: 'toppings' },
+      { id: 'shark-siomai', name: 'Shark Siomai', price: 25, category: 'toppings' },
+      { id: 'chicken-pops', name: 'Chicken Pops', price: 20, category: 'toppings' },
+      { id: 'lumpiang-shanghai', name: 'Lumpiang Shanghai', price: 20, category: 'toppings' },
+      { id: 'mini-chicken-fillet', name: 'Mini Chicken Fillet', price: 35, category: 'toppings' },
+      { id: 'nuggets', name: 'Nuggets', price: 30, category: 'toppings' },
+      { id: 'egg', name: 'Egg', price: 15, category: 'toppings' },
+      { id: 'embotido', name: 'Embotido', price: 30, category: 'toppings' }
+    ]
   },
 
-  // Noodles
+  // Hotdog Sandwich
   {
-    id: 'beef-chow-fun',
-    name: 'Beef Chow Fun',
-    description: 'Stir-fried wide rice noodles with tender beef and bean sprouts',
-    basePrice: 280,
-    category: 'noodles',
+    id: 'jumbo-tj-stick',
+    name: 'Jumbo TJ on Stick',
+    description: 'Jumbo TJ hotdog served on a stick - perfect for on-the-go snacking',
+    basePrice: 25,
+    category: 'hotdog-sandwich',
+    available: true
+  },
+  {
+    id: 'jumbo-tj-sandwich',
+    name: 'Jumbo TJ Sandwich',
+    description: 'Jumbo TJ hotdog in a soft, fresh bun - classic and satisfying',
+    basePrice: 39,
+    category: 'hotdog-sandwich',
+    available: true
+  },
+  {
+    id: 'jumbo-tj-cheesy-sandwich',
+    name: 'Jumbo TJ Cheesy Sandwich with Lettuce',
+    description: 'Jumbo TJ hotdog with melted cheese and fresh crispy lettuce - our signature creation!',
+    basePrice: 59,
+    category: 'hotdog-sandwich',
     popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+    available: true
   },
   {
-    id: 'dan-dan-noodles',
-    name: 'Dan Dan Noodles',
-    description: 'Sichuan noodles with spicy sesame sauce and minced pork',
-    basePrice: 250,
-    category: 'noodles',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+    id: 'hungarian-stick',
+    name: 'Hungarian on Stick',
+    description: 'Premium Hungarian hotdog on a stick - rich and flavorful',
+    basePrice: 49,
+    category: 'hotdog-sandwich',
+    available: true
   },
   {
-    id: 'wonton-noodle-soup',
-    name: 'Wonton Noodle Soup',
-    description: 'Fresh egg noodles in clear broth with pork and shrimp wontons',
-    basePrice: 220,
-    category: 'noodles',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'pad-thai',
-    name: 'Pad Thai',
-    description: 'Thai stir-fried rice noodles with shrimp, tofu, and peanuts',
-    basePrice: 260,
-    category: 'noodles',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'lo-mein',
-    name: 'Chicken Lo Mein',
-    description: 'Soft egg noodles tossed with chicken and vegetables',
-    basePrice: 240,
-    category: 'noodles',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-
-  // Rice Dishes
-  {
-    id: 'yang-chow-fried-rice',
-    name: 'Yang Chow Fried Rice',
-    description: 'Classic fried rice with shrimp, char siu, and eggs',
-    basePrice: 280,
-    category: 'rice-dishes',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'beef-broccoli-rice',
-    name: 'Beef and Broccoli Rice',
-    description: 'Tender beef with fresh broccoli in savory sauce over steamed rice',
-    basePrice: 320,
-    category: 'rice-dishes',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'sweet-sour-pork-rice',
-    name: 'Sweet and Sour Pork Rice',
-    description: 'Crispy pork with pineapple and bell peppers in tangy sauce',
-    basePrice: 300,
-    category: 'rice-dishes',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'mapo-tofu-rice',
-    name: 'Mapo Tofu Rice',
-    description: 'Silky tofu in spicy Sichuan sauce with ground pork over rice',
-    basePrice: 260,
-    category: 'rice-dishes',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'kung-pao-chicken-rice',
-    name: 'Kung Pao Chicken Rice',
-    description: 'Diced chicken with peanuts and chili peppers in savory sauce',
-    basePrice: 290,
-    category: 'rice-dishes',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-
-  // Beverages
-  {
-    id: 'jasmine-tea',
-    name: 'Jasmine Tea',
-    description: 'Fragrant jasmine tea served hot in traditional pot',
-    basePrice: 80,
-    category: 'beverages',
-    popular: true,
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'oolong-tea',
-    name: 'Oolong Tea',
-    description: 'Premium oolong tea with complex floral notes',
-    basePrice: 100,
-    category: 'beverages',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'chrysanthemum-tea',
-    name: 'Chrysanthemum Tea',
-    description: 'Cooling herbal tea with dried chrysanthemum flowers',
-    basePrice: 90,
-    category: 'beverages',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'lychee-juice',
-    name: 'Fresh Lychee Juice',
-    description: 'Sweet and refreshing lychee juice served chilled',
-    basePrice: 120,
-    category: 'beverages',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'winter-melon-tea',
-    name: 'Winter Melon Tea',
-    description: 'Traditional Chinese tea with subtle sweet flavor',
-    basePrice: 85,
-    category: 'beverages',
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
-  },
-  {
-    id: 'hot-soy-milk',
-    name: 'Hot Soy Milk',
-    description: 'Fresh soy milk served hot with optional sugar',
+    id: 'hungarian-cheesy-sandwich',
+    name: 'Hungarian Cheesy Sandwich',
+    description: 'Premium Hungarian hotdog with melted cheese - a gourmet treat',
     basePrice: 70,
-    category: 'beverages',
-    variations: [
-      { id: 'plain', name: 'Plain', price: 0 },
-      { id: 'sweet', name: 'Sweetened', price: 10 }
-    ],
-    image: 'https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=800'
+    category: 'hotdog-sandwich',
+    popular: true,
+    available: true
   },
+
+  // Fries
+  {
+    id: 'fries-small',
+    name: 'Fries - Small',
+    description: 'Crispy golden fries - perfectly seasoned and hot',
+    basePrice: 35,
+    category: 'fries',
+    available: true
+  },
+  {
+    id: 'fries-medium',
+    name: 'Fries - Medium',
+    description: 'Crispy golden fries - perfectly seasoned and hot',
+    basePrice: 50,
+    category: 'fries',
+    available: true
+  },
+  {
+    id: 'fries-large',
+    name: 'Fries - Large',
+    description: 'Crispy golden fries - perfectly seasoned and hot',
+    basePrice: 65,
+    category: 'fries',
+    available: true
+  },
+  {
+    id: 'coated-fries-small',
+    name: 'Crispy Coated Fries - Small',
+    description: 'Extra crispy coated fries with special batter - extra crunchy!',
+    basePrice: 45,
+    category: 'fries',
+    available: true
+  },
+  {
+    id: 'coated-fries-medium',
+    name: 'Crispy Coated Fries - Medium',
+    description: 'Extra crispy coated fries with special batter - extra crunchy!',
+    basePrice: 60,
+    category: 'fries',
+    available: true
+  },
+  {
+    id: 'coated-fries-large',
+    name: 'Crispy Coated Fries - Large',
+    description: 'Extra crispy coated fries with special batter - extra crunchy!',
+    basePrice: 80,
+    category: 'fries',
+    popular: true,
+    available: true
+  },
+
+  // Chicken Poppers
+  {
+    id: 'chicken-poppers-small',
+    name: 'Chicken Poppers - Small',
+    description: 'Tender chicken bites - crispy on the outside, juicy inside',
+    basePrice: 50,
+    category: 'chicken-poppers',
+    available: true
+  },
+  {
+    id: 'chicken-poppers-medium',
+    name: 'Chicken Poppers - Medium',
+    description: 'Tender chicken bites - crispy on the outside, juicy inside',
+    basePrice: 75,
+    category: 'chicken-poppers',
+    available: true
+  },
+  {
+    id: 'chicken-poppers-large',
+    name: 'Chicken Poppers - Large',
+    description: 'Tender chicken bites - crispy on the outside, juicy inside',
+    basePrice: 90,
+    category: 'chicken-poppers',
+    popular: true,
+    available: true
+  },
+  {
+    id: 'cheese-sticks',
+    name: 'Cheese Sticks',
+    description: 'Melted cheese in crispy coating - gooey and delicious!',
+    basePrice: 30,
+    category: 'chicken-poppers',
+    available: true
+  },
+
+  // Pick-A-Waffle
+  {
+    id: 'waffle-tj-hotdog',
+    name: 'TJ Hotdog Waffle',
+    description: 'TJ hotdog wrapped in a warm, crispy waffle - unique and tasty!',
+    basePrice: 30,
+    category: 'waffle',
+    available: true
+  },
+  {
+    id: 'waffle-ham-cheese',
+    name: 'Ham & Cheese Waffle',
+    description: 'Ham and cheese wrapped in a warm, crispy waffle - savory and satisfying',
+    basePrice: 30,
+    category: 'waffle',
+    available: true
+  },
+  {
+    id: 'waffle-red-monggo',
+    name: 'Red Monggo Waffle',
+    description: 'Red monggo wrapped in a warm, crispy waffle - traditional Filipino flavor',
+    basePrice: 30,
+    category: 'waffle',
+    available: true
+  },
+  {
+    id: 'waffle-chocolate',
+    name: 'Chocolate Waffle',
+    description: 'Chocolate-filled waffle - sweet and indulgent treat',
+    basePrice: 30,
+    category: 'waffle',
+    popular: true,
+    available: true
+  },
+  {
+    id: 'waffle-matcha',
+    name: 'Matcha Waffle',
+    description: 'Matcha-flavored waffle - earthy and aromatic',
+    basePrice: 25,
+    category: 'waffle',
+    available: true
+  },
+  {
+    id: 'waffle-cheese',
+    name: 'Cheese Waffle',
+    description: 'Cheese-filled waffle - simple and delicious',
+    basePrice: 20,
+    category: 'waffle',
+    available: true
+  },
+
+  // Burger
+  {
+    id: 'tlc-burger',
+    name: 'TLC Burger (w/ Tomato, Lettuce, & Cheese)',
+    description: 'Classic burger with fresh tomato, crisp lettuce, and melted cheese - our signature burger!',
+    basePrice: 65,
+    category: 'burger',
+    popular: true,
+    available: true
+  },
+  {
+    id: 'cheese-burger',
+    name: 'Cheese Burger',
+    description: 'Burger with melted cheese - simple and satisfying',
+    basePrice: 59,
+    category: 'burger',
+    available: true
+  },
+  {
+    id: 'burger-egg',
+    name: 'Burger w/ Egg',
+    description: 'Burger topped with a perfectly fried egg - protein-packed!',
+    basePrice: 59,
+    category: 'burger',
+    available: true
+  },
+  {
+    id: 'ham-egg',
+    name: 'Ham & Egg',
+    description: 'Ham and egg sandwich - classic breakfast favorite',
+    basePrice: 55,
+    category: 'burger',
+    available: true
+  },
+  {
+    id: 'ham-cheese',
+    name: 'Ham & Cheese',
+    description: 'Ham and cheese sandwich - timeless combination',
+    basePrice: 55,
+    category: 'burger',
+    available: true
+  },
+  {
+    id: 'just-burger',
+    name: 'Just Burger',
+    description: 'Simple burger patty in a fresh bun - pure and delicious',
+    basePrice: 52,
+    category: 'burger',
+    available: true
+  },
+  {
+    id: 'ham-sandwich',
+    name: 'Ham Sandwich',
+    description: 'Classic ham sandwich - simple and satisfying',
+    basePrice: 45,
+    category: 'burger',
+    available: true
+  },
+
+  // Flavors (as separate items for easy selection)
+  {
+    id: 'flavor-cheese',
+    name: 'Cheese Flavor',
+    description: 'Rich and creamy cheese flavor to enhance your dish',
+    basePrice: 0,
+    category: 'flavors',
+    available: true
+  },
+  {
+    id: 'flavor-bbq',
+    name: 'BBQ Flavor',
+    description: 'Smoky and tangy BBQ flavor - perfect for any dish',
+    basePrice: 0,
+    category: 'flavors',
+    available: true
+  },
+  {
+    id: 'flavor-sour-cream',
+    name: 'Sour Cream Flavor',
+    description: 'Cool and tangy sour cream flavor - refreshing addition',
+    basePrice: 0,
+    category: 'flavors',
+    available: true
+  },
+  {
+    id: 'flavor-bbq-chili',
+    name: 'BBQ Chili Flavor',
+    description: 'Spicy BBQ chili flavor - adds heat and flavor!',
+    basePrice: 0,
+    category: 'flavors',
+    available: true
+  },
+
+  // Add Ons
+  {
+    id: 'addon-cheesy-overload',
+    name: 'Cheesy Overload',
+    description: 'Extra cheese overload - for the ultimate cheese lovers!',
+    basePrice: 20,
+    category: 'add-ons',
+    available: true
+  },
+  {
+    id: 'addon-cheese-sauce',
+    name: 'Cheese Sauce',
+    description: 'Rich and creamy cheese sauce - perfect dipping companion',
+    basePrice: 10,
+    category: 'add-ons',
+    available: true
+  },
+  {
+    id: 'addon-bbq-sauce',
+    name: 'BBQ Sauce',
+    description: 'Smoky and tangy BBQ sauce - enhances any dish',
+    basePrice: 10,
+    category: 'add-ons',
+    available: true
+  }
 ];
 
 export const categories = [
-  { id: 'dim-sum', name: 'Dim Sum', icon: '🥟' },
-  { id: 'noodles', name: 'Noodles', icon: '🍜' },
-  { id: 'rice-dishes', name: 'Rice Dishes', icon: '🍚' },
-  { id: 'beverages', name: 'Beverages', icon: '🍵' }
+  { id: 'fried-rice', name: 'Fried Rice Fiesta', icon: '🍳' },
+  { id: 'hotdog-sandwich', name: 'Hotdog Sandwich', icon: '🌭' },
+  { id: 'fries', name: 'Fries', icon: '🍟' },
+  { id: 'chicken-poppers', name: 'Chicken Poppers', icon: '🍗' },
+  { id: 'waffle', name: 'Pick-A-Waffle', icon: '🧇' },
+  { id: 'burger', name: 'Burger', icon: '🍔' },
+  { id: 'flavors', name: 'Flavors', icon: '✨' },
+  { id: 'add-ons', name: 'Add Ons', icon: '➕' }
 ];
 
 export const addOnCategories = [
-  { id: 'spice', name: 'Spice Level' },
-  { id: 'protein', name: 'Extra Protein' },
-  { id: 'sauce', name: 'Sauces' },
-  { id: 'extras', name: 'Extras' }
+  { id: 'toppings', name: 'Toppings' },
+  { id: 'flavors', name: 'Flavors' },
+  { id: 'add-ons', name: 'Add Ons' }
 ];

@@ -4,34 +4,43 @@ export default {
   theme: {
     extend: {
       colors: {
-        red: {
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          300: '#fca5a5',
-          400: '#f87171',
-          500: '#ef4444',
-          600: '#dc2626',
-          700: '#b91c1c',
-          800: '#991b1b',
-          900: '#7f1d1d'
+        blackboard: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#1a4d3a',
+          900: '#0f2e1f'
         },
-        yellow: {
-          50: '#fefce8',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f'
+        chalk: {
+          50: '#ffffff',
+          100: '#f1f3f4',
+          200: '#e8eaed',
+          300: '#dadce0',
+          400: '#bdc1c6',
+          500: '#9aa0a6',
+          600: '#80868b',
+          700: '#5f6368',
+          800: '#3c4043',
+          900: '#202124'
+        },
+        accent: {
+          green: '#6bbf8a',
+          yellow: '#f9d71c',
+          red: '#f28b82',
+          blue: '#8ab4f8',
+          orange: '#ffad42'
         }
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
-        'noto': ['Noto Serif', 'serif']
+        'noto': ['Noto Serif', 'serif'],
+        'chalk': ['"Schoolbell"', '"Kalam"', 'cursive', 'sans-serif'],
+        'blackboard': ['"Walter Turncoat"', '"Fredoka One"', 'cursive', 'sans-serif']
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

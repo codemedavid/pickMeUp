@@ -5,10 +5,10 @@ export interface Category {
   id: string;
   name: string;
   icon: string;
-  sort_order: number;
-  active: boolean;
-  created_at: string;
-  updated_at: string;
+  sort_order?: number;
+  active?: boolean;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export const useCategories = () => {

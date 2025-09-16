@@ -20,7 +20,7 @@ function MainApp() {
   };
 
   return (
-    <div className="min-h-screen bg-cream-50 font-inter">
+    <div className="min-h-screen bg-blackboard font-chalk">
       <Header 
         cartItemsCount={cart.getTotalItems()}
         onCartClick={() => handleViewChange('cart')}
@@ -29,13 +29,20 @@ function MainApp() {
       
       {currentView === 'menu' && (
         <>
-          <Hero />
-          <Menu 
-            menuItems={menuItems}
-            addToCart={cart.addToCart}
-            cartItems={cart.cartItems}
-            updateQuantity={cart.updateQuantity}
-          />
+          <Hero onExploreMenu={() => {
+            const menuSection = document.getElementById('menu-section');
+            if (menuSection) {
+              menuSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }} />
+          <div id="menu-section">
+            <Menu 
+              menuItems={menuItems}
+              addToCart={cart.addToCart}
+              cartItems={cart.cartItems}
+              updateQuantity={cart.updateQuantity}
+            />
+          </div>
         </>
       )}
       
