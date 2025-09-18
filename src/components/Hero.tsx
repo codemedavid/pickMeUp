@@ -18,15 +18,15 @@ const Hero: React.FC<HeroProps> = ({ onExploreMenu }) => {
   };
 
   return (
-        <section className="relative bg-gradient-blue py-20 px-4">
+        <section className="relative bg-gradient-orange py-20 px-4 filipino-pattern">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-5xl md:text-6xl font-inter font-bold text-white mb-6 animate-fade-in">
-         Fresh & Energizing
-          <span className="block text-yellow-400 mt-2">Pick-Me-Up</span>
+         Authentic Filipino
+          <span className="block text-yellow-300 mt-2">JAMBayan</span>
         </h1>
             <p className="text-xl text-white mb-8 max-w-2xl mx-auto animate-slide-up font-inter">
-              The Perfect Pick-Me-Up, Every Time! A refreshing and energizing drink that help you feel
-              revitalized and ready to take on your day!
+              Experience the rich flavors of authentic Filipino cuisine! From hearty set meals to traditional favorites like Sinigang, Adobo, and Bulalo, 
+              every dish is prepared with love and traditional Filipino recipes.
             </p>
         <div className="flex justify-center">
           <button 

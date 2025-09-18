@@ -20,7 +20,7 @@ function MainApp() {
   };
 
   return (
-        <div className="min-h-screen bg-gradient-primary font-inter">
+        <div className="min-h-screen bg-gradient-filipino font-inter">
       <Header 
         cartItemsCount={cart.getTotalItems()}
         onCartClick={() => handleViewChange('cart')}

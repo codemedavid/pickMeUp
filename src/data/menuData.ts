@@ -1,342 +1,265 @@
-import { MenuItem } from '../types';
+export interface MenuItem {
+  id: string;
+  name: string;
+  description: string;
+  basePrice: number;
+  category: string;
+  image?: string;
+  available: boolean;
+  popular?: boolean;
+  variations?: Variation[];
+  addOns?: AddOn[];
+}
+
+export interface Variation {
+  id: string;
+  name: string;
+  price: number;
+}
+
+export interface AddOn {
+  id: string;
+  name: string;
+  price: number;
+  category: string;
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  icon: string;
+}
+
+export const categories: Category[] = [
+  { id: 'set-meals', name: '🍽️ JAMBayan Set Meals', icon: '🍽️' },
+  { id: 'pork', name: '🐖 Pork', icon: '🐖' },
+  { id: 'chicken', name: '🐓 Chicken', icon: '🐓' },
+  { id: 'beef', name: '🐄 Beef', icon: '🐄' },
+  { id: 'fish', name: '🐟 Fish', icon: '🐟' },
+  { id: 'vegetables', name: '🥬 Vegetables', icon: '🥬' }
+];
 
 export const menuData: MenuItem[] = [
-  // Fried Rice Fiesta
+  // Set Meals
   {
-    id: 'fried-rice-fiesta',
-    name: 'Fried Rice Fiesta',
-    description: 'Delicious fried rice with your choice of toppings - perfectly seasoned and made fresh to order',
-    basePrice: 59,
-    category: 'fried-rice',
-    popular: true,
+    id: 'set-1',
+    name: 'JAMBayan Set Meal 1',
+    description: 'Good for 3-5 Persons. Includes Platter Rice, Whole Fried Chicken, Ensaladang Talong, Pancit Bihon, and Pitcher Iced Tea.',
+    basePrice: 999,
+    category: 'set-meals',
     available: true,
-    addOns: [
-      { id: 'tj-jumbo-hotdog', name: 'TJ Jumbo Hotdog', price: 20, category: 'toppings' },
-      { id: 'pork-siomai', name: 'Pork Siomai', price: 25, category: 'toppings' },
-      { id: 'shark-siomai', name: 'Shark Siomai', price: 25, category: 'toppings' },
-      { id: 'chicken-pops', name: 'Chicken Pops', price: 20, category: 'toppings' },
-      { id: 'lumpiang-shanghai', name: 'Lumpiang Shanghai', price: 20, category: 'toppings' },
-      { id: 'mini-chicken-fillet', name: 'Mini Chicken Fillet', price: 35, category: 'toppings' },
-      { id: 'nuggets', name: 'Nuggets', price: 30, category: 'toppings' },
-      { id: 'egg', name: 'Egg', price: 15, category: 'toppings' },
-      { id: 'embotido', name: 'Embotido', price: 30, category: 'toppings' }
-    ]
+    popular: true
+  },
+  {
+    id: 'set-2',
+    name: 'JAMBayan Set Meal 2',
+    description: 'Good for 6-8 Persons. Includes 2 Platter Rice, Sinigang na Baboy, Pakbet, Pritong Tilapia, Pancit Canton, and 2 Pitcher Iced Tea.',
+    basePrice: 1499,
+    category: 'set-meals',
+    available: true,
+    popular: true
+  },
+  {
+    id: 'set-3',
+    name: 'JAMBayan Set Meal 3',
+    description: 'Good for 10-15 Persons. Includes 3 Platter Rice, Bulalo, Chopsuey, BBQ Liempo, Chicken Curry, Mix Pancit, and 3 Pitcher Iced Tea.',
+    basePrice: 2299,
+    category: 'set-meals',
+    available: true,
+    popular: true
   },
 
-  // Hotdog Sandwich
+  // Pork Dishes
   {
-    id: 'jumbo-tj-stick',
-    name: 'Jumbo TJ on Stick',
-    description: 'Jumbo TJ hotdog served on a stick - perfect for on-the-go snacking',
-    basePrice: 25,
-    category: 'hotdog-sandwich',
-    available: true
+    id: 'pork-sinigang',
+    name: 'Sinigang na Baboy',
+    description: 'Traditional Filipino sour soup with pork, vegetables, and tamarind broth. Served with rice.',
+    basePrice: 280,
+    category: 'pork',
+    available: true,
+    popular: true
   },
   {
-    id: 'jumbo-tj-sandwich',
-    name: 'Jumbo TJ Sandwich',
-    description: 'Jumbo TJ hotdog in a soft, fresh bun - classic and satisfying',
-    basePrice: 39,
-    category: 'hotdog-sandwich',
-    available: true
+    id: 'pork-adobo',
+    name: 'Pork Adobo',
+    description: 'Classic Filipino dish with tender pork marinated in soy sauce, vinegar, garlic, and bay leaves.',
+    basePrice: 280,
+    category: 'pork',
+    available: true,
+    popular: true
   },
   {
-    id: 'jumbo-tj-cheesy-sandwich',
-    name: 'Jumbo TJ Cheesy Sandwich with Lettuce',
-    description: 'Jumbo TJ hotdog with melted cheese and fresh crispy lettuce - our signature creation!',
-    basePrice: 59,
-    category: 'hotdog-sandwich',
-    popular: true,
-    available: true
+    id: 'pork-bicol-express',
+    name: 'Bicol Express',
+    description: 'Spicy pork dish with coconut milk, chilies, and shrimp paste. A Bicol region specialty.',
+    basePrice: 280,
+    category: 'pork',
+    available: true,
+    popular: false
   },
   {
-    id: 'hungarian-stick',
-    name: 'Hungarian on Stick',
-    description: 'Premium Hungarian hotdog on a stick - rich and flavorful',
-    basePrice: 49,
-    category: 'hotdog-sandwich',
-    available: true
+    id: 'pork-nilaga',
+    name: 'Pork Nilaga',
+    description: 'Clear soup with tender pork, potatoes, cabbage, and corn. Comfort food at its finest.',
+    basePrice: 280,
+    category: 'pork',
+    available: true,
+    popular: false
   },
   {
-    id: 'hungarian-cheesy-sandwich',
-    name: 'Hungarian Cheesy Sandwich',
-    description: 'Premium Hungarian hotdog with melted cheese - a gourmet treat',
-    basePrice: 70,
-    category: 'hotdog-sandwich',
-    popular: true,
-    available: true
-  },
-
-  // Fries
-  {
-    id: 'fries-small',
-    name: 'Fries - Small',
-    description: 'Crispy golden fries - perfectly seasoned and hot',
-    basePrice: 35,
-    category: 'fries',
-    available: true
-  },
-  {
-    id: 'fries-medium',
-    name: 'Fries - Medium',
-    description: 'Crispy golden fries - perfectly seasoned and hot',
-    basePrice: 50,
-    category: 'fries',
-    available: true
-  },
-  {
-    id: 'fries-large',
-    name: 'Fries - Large',
-    description: 'Crispy golden fries - perfectly seasoned and hot',
-    basePrice: 65,
-    category: 'fries',
-    available: true
-  },
-  {
-    id: 'coated-fries-small',
-    name: 'Crispy Coated Fries - Small',
-    description: 'Extra crispy coated fries with special batter - extra crunchy!',
-    basePrice: 45,
-    category: 'fries',
-    available: true
-  },
-  {
-    id: 'coated-fries-medium',
-    name: 'Crispy Coated Fries - Medium',
-    description: 'Extra crispy coated fries with special batter - extra crunchy!',
-    basePrice: 60,
-    category: 'fries',
-    available: true
-  },
-  {
-    id: 'coated-fries-large',
-    name: 'Crispy Coated Fries - Large',
-    description: 'Extra crispy coated fries with special batter - extra crunchy!',
-    basePrice: 80,
-    category: 'fries',
-    popular: true,
-    available: true
+    id: 'pork-caldereta',
+    name: 'Pork Caldereta',
+    description: 'Rich tomato-based stew with pork, vegetables, and liver spread. A festive Filipino favorite.',
+    basePrice: 280,
+    category: 'pork',
+    available: true,
+    popular: false
   },
 
-  // Chicken Poppers
+  // Chicken Dishes
   {
-    id: 'chicken-poppers-small',
-    name: 'Chicken Poppers - Small',
-    description: 'Tender chicken bites - crispy on the outside, juicy inside',
-    basePrice: 50,
-    category: 'chicken-poppers',
-    available: true
+    id: 'chicken-tinola',
+    name: 'Chicken Tinola',
+    description: 'Healthy chicken soup with ginger, papaya, and moringa leaves. Traditional Filipino comfort food.',
+    basePrice: 280,
+    category: 'chicken',
+    available: true,
+    popular: true
   },
   {
-    id: 'chicken-poppers-medium',
-    name: 'Chicken Poppers - Medium',
-    description: 'Tender chicken bites - crispy on the outside, juicy inside',
-    basePrice: 75,
-    category: 'chicken-poppers',
-    available: true
+    id: 'chicken-adobo',
+    name: 'Chicken Adobo',
+    description: 'Classic Filipino chicken marinated in soy sauce, vinegar, garlic, and bay leaves. Perfect with rice.',
+    basePrice: 280,
+    category: 'chicken',
+    available: true,
+    popular: true
   },
   {
-    id: 'chicken-poppers-large',
-    name: 'Chicken Poppers - Large',
-    description: 'Tender chicken bites - crispy on the outside, juicy inside',
-    basePrice: 90,
-    category: 'chicken-poppers',
-    popular: true,
-    available: true
+    id: 'chicken-fried',
+    name: 'Fried Chicken',
+    description: 'Crispy golden fried chicken with secret Filipino spices. Served with your choice of dipping sauce.',
+    basePrice: 350,
+    category: 'chicken',
+    available: true,
+    popular: true
   },
   {
-    id: 'cheese-sticks',
-    name: 'Cheese Sticks',
-    description: 'Melted cheese in crispy coating - gooey and delicious!',
-    basePrice: 30,
-    category: 'chicken-poppers',
-    available: true
-  },
-
-  // Pick-A-Waffle
-  {
-    id: 'waffle-tj-hotdog',
-    name: 'TJ Hotdog Waffle',
-    description: 'TJ hotdog wrapped in a warm, crispy waffle - unique and tasty!',
-    basePrice: 30,
-    category: 'waffle',
-    available: true
+    id: 'chicken-curry',
+    name: 'Chicken Curry',
+    description: 'Creamy coconut curry with tender chicken, potatoes, and carrots. Mild and flavorful.',
+    basePrice: 280,
+    category: 'chicken',
+    available: true,
+    popular: false
   },
   {
-    id: 'waffle-ham-cheese',
-    name: 'Ham & Cheese Waffle',
-    description: 'Ham and cheese wrapped in a warm, crispy waffle - savory and satisfying',
-    basePrice: 30,
-    category: 'waffle',
-    available: true
-  },
-  {
-    id: 'waffle-red-monggo',
-    name: 'Red Monggo Waffle',
-    description: 'Red monggo wrapped in a warm, crispy waffle - traditional Filipino flavor',
-    basePrice: 30,
-    category: 'waffle',
-    available: true
-  },
-  {
-    id: 'waffle-chocolate',
-    name: 'Chocolate Waffle',
-    description: 'Chocolate-filled waffle - sweet and indulgent treat',
-    basePrice: 30,
-    category: 'waffle',
-    popular: true,
-    available: true
-  },
-  {
-    id: 'waffle-matcha',
-    name: 'Matcha Waffle',
-    description: 'Matcha-flavored waffle - earthy and aromatic',
-    basePrice: 25,
-    category: 'waffle',
-    available: true
-  },
-  {
-    id: 'waffle-cheese',
-    name: 'Cheese Waffle',
-    description: 'Cheese-filled waffle - simple and delicious',
-    basePrice: 20,
-    category: 'waffle',
-    available: true
+    id: 'chicken-sweet-sour',
+    name: "Chicken Sweet n' Sour",
+    description: 'Tender chicken in sweet and tangy sauce with bell peppers and pineapple. A crowd favorite.',
+    basePrice: 280,
+    category: 'chicken',
+    available: true,
+    popular: false
   },
 
-  // Burger
+  // Beef Dishes
   {
-    id: 'tlc-burger',
-    name: 'TLC Burger (w/ Tomato, Lettuce, & Cheese)',
-    description: 'Classic burger with fresh tomato, crisp lettuce, and melted cheese - our signature burger!',
-    basePrice: 65,
-    category: 'burger',
-    popular: true,
-    available: true
+    id: 'beef-bulalo',
+    name: 'Bulalo',
+    description: 'Rich beef bone marrow soup with tender meat and vegetables. A Batangas specialty.',
+    basePrice: 450,
+    category: 'beef',
+    available: true,
+    popular: true
   },
   {
-    id: 'cheese-burger',
-    name: 'Cheese Burger',
-    description: 'Burger with melted cheese - simple and satisfying',
-    basePrice: 59,
-    category: 'burger',
-    available: true
+    id: 'beef-steak',
+    name: 'Beef Steak',
+    description: 'Tender beef strips in savory soy sauce and calamansi marinade. Served with onions.',
+    basePrice: 400,
+    category: 'beef',
+    available: true,
+    popular: true
   },
   {
-    id: 'burger-egg',
-    name: 'Burger w/ Egg',
-    description: 'Burger topped with a perfectly fried egg - protein-packed!',
-    basePrice: 59,
-    category: 'burger',
-    available: true
-  },
-  {
-    id: 'ham-egg',
-    name: 'Ham & Egg',
-    description: 'Ham and egg sandwich - classic breakfast favorite',
-    basePrice: 55,
-    category: 'burger',
-    available: true
-  },
-  {
-    id: 'ham-cheese',
-    name: 'Ham & Cheese',
-    description: 'Ham and cheese sandwich - timeless combination',
-    basePrice: 55,
-    category: 'burger',
-    available: true
-  },
-  {
-    id: 'just-burger',
-    name: 'Just Burger',
-    description: 'Simple burger patty in a fresh bun - pure and delicious',
-    basePrice: 52,
-    category: 'burger',
-    available: true
-  },
-  {
-    id: 'ham-sandwich',
-    name: 'Ham Sandwich',
-    description: 'Classic ham sandwich - simple and satisfying',
-    basePrice: 45,
-    category: 'burger',
-    available: true
+    id: 'beef-nilaga',
+    name: 'Beef Nilaga',
+    description: 'Clear soup with tender beef, potatoes, cabbage, and corn. Simple yet satisfying.',
+    basePrice: 400,
+    category: 'beef',
+    available: true,
+    popular: false
   },
 
-  // Flavors (as separate items for easy selection)
+  // Fish Dishes
   {
-    id: 'flavor-cheese',
-    name: 'Cheese Flavor',
-    description: 'Rich and creamy cheese flavor to enhance your dish',
-    basePrice: 0,
-    category: 'flavors',
-    available: true
+    id: 'fish-inihaw-tilapia',
+    name: 'Inihaw na Tilapia',
+    description: 'Grilled tilapia with garlic, ginger, and soy sauce. Fresh and healthy Filipino style.',
+    basePrice: 250,
+    category: 'fish',
+    available: true,
+    popular: true
   },
   {
-    id: 'flavor-bbq',
-    name: 'BBQ Flavor',
-    description: 'Smoky and tangy BBQ flavor - perfect for any dish',
-    basePrice: 0,
-    category: 'flavors',
-    available: true
+    id: 'fish-sinigang-bangus',
+    name: 'Sinigang na Bangus',
+    description: 'Sour soup with milkfish, vegetables, and tamarind broth. A seafood favorite.',
+    basePrice: 300,
+    category: 'fish',
+    available: true,
+    popular: false
   },
   {
-    id: 'flavor-sour-cream',
-    name: 'Sour Cream Flavor',
-    description: 'Cool and tangy sour cream flavor - refreshing addition',
-    basePrice: 0,
-    category: 'flavors',
-    available: true
-  },
-  {
-    id: 'flavor-bbq-chili',
-    name: 'BBQ Chili Flavor',
-    description: 'Spicy BBQ chili flavor - adds heat and flavor!',
-    basePrice: 0,
-    category: 'flavors',
-    available: true
+    id: 'fish-fried-tilapia',
+    name: 'Fried Tilapia',
+    description: 'Crispy fried tilapia served with vinegar dipping sauce and fresh tomatoes.',
+    basePrice: 250,
+    category: 'fish',
+    available: true,
+    popular: false
   },
 
-  // Add Ons
+  // Vegetable Dishes
   {
-    id: 'addon-cheesy-overload',
-    name: 'Cheesy Overload',
-    description: 'Extra cheese overload - for the ultimate cheese lovers!',
-    basePrice: 20,
-    category: 'add-ons',
-    available: true
+    id: 'veggie-chopsuey',
+    name: 'Chopsuey',
+    description: 'Mixed vegetables in savory sauce with pork and shrimp. Colorful and nutritious.',
+    basePrice: 300,
+    category: 'vegetables',
+    available: true,
+    popular: true
   },
   {
-    id: 'addon-cheese-sauce',
-    name: 'Cheese Sauce',
-    description: 'Rich and creamy cheese sauce - perfect dipping companion',
-    basePrice: 10,
-    category: 'add-ons',
-    available: true
+    id: 'veggie-pakbet',
+    name: 'Pakbet',
+    description: 'Traditional Ilocano vegetable dish with bitter melon, eggplant, okra, and shrimp paste.',
+    basePrice: 300,
+    category: 'vegetables',
+    available: true,
+    popular: false
   },
   {
-    id: 'addon-bbq-sauce',
-    name: 'BBQ Sauce',
-    description: 'Smoky and tangy BBQ sauce - enhances any dish',
-    basePrice: 10,
-    category: 'add-ons',
-    available: true
+    id: 'veggie-ensaladang-talong',
+    name: 'Ensaladang Talong',
+    description: 'Grilled eggplant salad with tomatoes, onions, and vinegar dressing. Fresh and tangy.',
+    basePrice: 250,
+    category: 'vegetables',
+    available: true,
+    popular: false
   }
 ];
 
-export const categories = [
-  { id: 'fried-rice', name: 'Fried Rice Fiesta', icon: '🍳' },
-  { id: 'hotdog-sandwich', name: 'Hotdog Sandwich', icon: '🌭' },
-  { id: 'fries', name: 'Fries', icon: '🍟' },
-  { id: 'chicken-poppers', name: 'Chicken Poppers', icon: '🍗' },
-  { id: 'waffle', name: 'Pick-A-Waffle', icon: '🧇' },
-  { id: 'burger', name: 'Burger', icon: '🍔' },
-  { id: 'flavors', name: 'Flavors', icon: '✨' },
-  { id: 'add-ons', name: 'Add Ons', icon: '➕' }
+export const addOns: AddOn[] = [
+  { id: 'extra-rice', name: 'Extra Rice', price: 25, category: 'Rice' },
+  { id: 'iced-tea', name: 'Iced Tea', price: 35, category: 'Beverages' },
+  { id: 'coke', name: 'Coke', price: 25, category: 'Beverages' },
+  { id: 'sprite', name: 'Sprite', price: 25, category: 'Beverages' },
+  { id: 'water', name: 'Bottled Water', price: 15, category: 'Beverages' }
 ];
 
 export const addOnCategories = [
-  { id: 'toppings', name: 'Toppings' },
-  { id: 'flavors', name: 'Flavors' },
-  { id: 'add-ons', name: 'Add Ons' }
+  { id: 'Rice', name: 'Rice' },
+  { id: 'Beverages', name: 'Beverages' }
 ];

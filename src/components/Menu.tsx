@@ -23,7 +23,7 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ menuItems, addToCart, cartItems, updateQuantity }) => {
   const { categories } = useCategories();
-  const [activeCategory, setActiveCategory] = React.useState('fried-rice');
+  const [activeCategory, setActiveCategory] = React.useState('set-meals');
 
   // Preload images when menu items change
   React.useEffect(() => {
@@ -93,10 +93,10 @@ const Menu: React.FC<MenuProps> = ({ menuItems, addToCart, cartItems, updateQuan
       />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-            <h2 className="text-4xl font-inter font-bold text-black mb-4">Our Menu</h2>
-            <p className="text-gray-700 max-w-2xl mx-auto font-inter">
-          Discover our selection of delicious fried rice, hotdog sandwiches, crispy fries, and more! 
-          All prepared with fresh ingredients and made to order.
+            <h2 className="text-4xl font-inter font-bold text-white mb-4">Our Menu</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto font-inter">
+          Discover our authentic Filipino cuisine! From hearty set meals perfect for sharing to traditional favorites like Sinigang, Adobo, Bulalo, and more. 
+          Every dish is prepared with fresh ingredients and traditional Filipino recipes.
         </p>
       </div>
 
@@ -109,7 +109,7 @@ const Menu: React.FC<MenuProps> = ({ menuItems, addToCart, cartItems, updateQuan
           <section key={category.id} id={category.id} className="mb-16">
             <div className="flex items-center mb-8">
               <span className="text-3xl mr-3">{category.icon}</span>
-                  <h3 className="text-3xl font-inter font-bold text-black">{category.name}</h3>
+                  <h3 className="text-3xl font-inter font-bold text-white">{category.name}</h3>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

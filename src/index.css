@@ -1,34 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Pick-Me-Up Colorful Theme */
+/* JAMBayan Filipino Cuisine Theme - Dark Version */
 
-/* Bright and Energetic Background */
+/* Dark Background */
 .bg-primary {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
   background-attachment: fixed;
 }
 
-.bg-red-theme {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
+.bg-orange-theme {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #c2410c 100%);
 }
 
-.bg-yellow-theme {
-  background: linear-gradient(135deg, #facc15 0%, #eab308 50%, #ca8a04 100%);
+.bg-black-theme {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
 }
 
-.bg-green-theme {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+.bg-filipino-warm {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
 }
 
-.bg-blue-theme {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
-}
-
-/* Modern Text Styles */
+/* Filipino-inspired Text Styles */
 .text-primary {
   color: #ffffff;
   font-weight: 600;
@@ -41,40 +37,32 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.text-red-bold {
-  color: #ef4444;
+.text-orange-bold {
+  color: #f97316;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.text-yellow-bold {
-  color: #facc15;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.text-filipino-orange {
+  color: #ea580c;
+  font-weight: 600;
 }
 
-.text-green-bold {
-  color: #22c55e;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.text-warm-black {
+  color: #1a1a1a;
+  font-weight: 500;
 }
 
-.text-blue-bold {
-  color: #3b82f6;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Modern Button Styles */
+/* Filipino-inspired Button Styles */
 .btn-primary {
-  background: linear-gradient(145deg, #3b82f6, #2563eb);
-  border: 2px solid #1d4ed8;
+  background: linear-gradient(145deg, #f97316, #ea580c);
+  border: 2px solid #c2410c;
   color: #ffffff;
   font-weight: 600;
   font-size: 1.1em;
   letter-spacing: 0.5px;
   box-shadow: 
-    0 6px 12px rgba(59, 130, 246, 0.3),
+    0 6px 12px rgba(249, 115, 22, 0.3),
     inset 0 2px 4px rgba(255, 255, 255, 0.2),
     inset 0 -2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -82,11 +70,11 @@
 }
 
 .btn-primary:hover {
-  background: linear-gradient(145deg, #2563eb, #1d4ed8);
-  border-color: #1e40af;
+  background: linear-gradient(145deg, #ea580c, #c2410c);
+  border-color: #9a3412;
   transform: translateY(-2px);
   box-shadow: 
-    0 8px 16px rgba(59, 130, 246, 0.4),
+    0 8px 16px rgba(249, 115, 22, 0.4),
     inset 0 2px 4px rgba(255, 255, 255, 0.25),
     inset 0 -2px 4px rgba(0, 0, 0, 0.15);
 }
@@ -94,72 +82,53 @@
 .btn-primary:active {
   transform: translateY(0);
   box-shadow: 
-    0 4px 8px rgba(59, 130, 246, 0.2),
+    0 4px 8px rgba(249, 115, 22, 0.2),
     inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.btn-red {
-  background: linear-gradient(145deg, #ef4444, #dc2626);
-  border: 2px solid #b91c1c;
+.btn-orange {
+  background: linear-gradient(145deg, #fb923c, #f97316);
+  border: 2px solid #ea580c;
   color: #ffffff;
   font-weight: 600;
   box-shadow: 
-    0 6px 12px rgba(239, 68, 68, 0.3),
+    0 6px 12px rgba(251, 146, 60, 0.3),
     inset 0 2px 4px rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
-.btn-red:hover {
-  background: linear-gradient(145deg, #dc2626, #b91c1c);
+.btn-orange:hover {
+  background: linear-gradient(145deg, #f97316, #ea580c);
   transform: translateY(-2px);
   box-shadow: 
-    0 8px 16px rgba(239, 68, 68, 0.4),
+    0 8px 16px rgba(251, 146, 60, 0.4),
     inset 0 2px 4px rgba(255, 255, 255, 0.25);
 }
 
-.btn-yellow {
-  background: linear-gradient(145deg, #facc15, #eab308);
-  border: 2px solid #ca8a04;
-  color: #000000;
-  font-weight: 600;
-  box-shadow: 
-    0 6px 12px rgba(250, 204, 21, 0.3),
-    inset 0 2px 4px rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.btn-yellow:hover {
-  background: linear-gradient(145deg, #eab308, #ca8a04);
-  transform: translateY(-2px);
-  box-shadow: 
-    0 8px 16px rgba(250, 204, 21, 0.4),
-    inset 0 2px 4px rgba(255, 255, 255, 0.25);
-}
-
-.btn-green {
-  background: linear-gradient(145deg, #22c55e, #16a34a);
-  border: 2px solid #15803d;
+.btn-black {
+  background: linear-gradient(145deg, #000000, #1a1a1a);
+  border: 2px solid #2d2d2d;
   color: #ffffff;
   font-weight: 600;
   box-shadow: 
-    0 6px 12px rgba(34, 197, 94, 0.3),
-    inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    0 6px 12px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
-.btn-green:hover {
-  background: linear-gradient(145deg, #16a34a, #15803d);
+.btn-black:hover {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
   transform: translateY(-2px);
   box-shadow: 
-    0 8px 16px rgba(34, 197, 94, 0.4),
-    inset 0 2px 4px rgba(255, 255, 255, 0.25);
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.15);
 }
 
 /* Modern Input Styles */
 .input-primary {
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #e2e8f0;
-  color: #1e293b;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #fed7aa;
+  color: #1a1a1a;
   font-weight: 500;
   box-shadow: 
     0 4px 8px rgba(0, 0, 0, 0.1),
@@ -168,64 +137,56 @@
 }
 
 .input-primary:focus {
-  border-color: #3b82f6;
+  border-color: #f97316;
   box-shadow: 
-    0 0 0 3px rgba(59, 130, 246, 0.1),
-    0 0 15px rgba(59, 130, 246, 0.2),
+    0 0 0 3px rgba(249, 115, 22, 0.1),
+    0 0 15px rgba(249, 115, 22, 0.2),
     0 4px 8px rgba(0, 0, 0, 0.1),
     inset 0 2px 4px rgba(255, 255, 255, 0.8);
 }
 
-/* Modern Card Styles */
+/* Filipino-inspired Card Styles - Dark Theme */
 .card-primary {
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px solid #e2e8f0;
+  background: rgba(26, 26, 26, 0.95);
+  border: 2px solid #f97316;
   box-shadow: 
-    0 12px 24px rgba(0, 0, 0, 0.1),
-    inset 0 2px 4px rgba(255, 255, 255, 0.8),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+    0 12px 24px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(249, 115, 22, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
   position: relative;
   backdrop-filter: blur(10px);
 }
 
-.card-red {
-  background: rgba(254, 242, 242, 0.95);
-  border: 2px solid #fecaca;
+.card-orange {
+  background: rgba(45, 45, 45, 0.95);
+  border: 2px solid #f97316;
   box-shadow: 
-    0 12px 24px rgba(239, 68, 68, 0.1),
-    inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    0 12px 24px rgba(249, 115, 22, 0.2),
+    inset 0 2px 4px rgba(249, 115, 22, 0.1);
 }
 
-.card-yellow {
-  background: rgba(254, 252, 232, 0.95);
-  border: 2px solid #fef08a;
+.card-black {
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid #2d2d2d;
   box-shadow: 
-    0 12px 24px rgba(250, 204, 21, 0.1),
-    inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    0 12px 24px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
-.card-green {
-  background: rgba(240, 253, 244, 0.95);
-  border: 2px solid #bbf7d0;
+.card-filipino {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(45, 45, 45, 0.9) 100%);
+  border: 2px solid #f97316;
   box-shadow: 
-    0 12px 24px rgba(34, 197, 94, 0.1),
-    inset 0 2px 4px rgba(255, 255, 255, 0.8);
-}
-
-.card-blue {
-  background: rgba(239, 246, 255, 0.95);
-  border: 2px solid #bfdbfe;
-  box-shadow: 
-    0 12px 24px rgba(59, 130, 246, 0.1),
-    inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    0 12px 24px rgba(249, 115, 22, 0.15),
+    inset 0 2px 4px rgba(249, 115, 22, 0.1);
 }
 
 /* Accent Colors */
-.text-accent-red { color: #ef4444; }
-.text-accent-yellow { color: #facc15; }
-.text-accent-green { color: #22c55e; }
-.text-accent-blue { color: #3b82f6; }
+.text-accent-orange { color: #f97316; }
+.text-accent-orange-dark { color: #ea580c; }
+.text-accent-orange-light { color: #fb923c; }
 .text-accent-black { color: #000000; }
+.text-accent-white { color: #ffffff; }
 
 /* Hide scrollbar for mobile nav */
 .scrollbar-hide {
@@ -254,22 +215,35 @@ img {
 }
 
 /* Gradient backgrounds for different sections */
-.bg-gradient-red {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+.bg-gradient-orange {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
 }
 
-.bg-gradient-yellow {
-  background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+.bg-gradient-black {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
 }
 
-.bg-gradient-green {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-}
-
-.bg-gradient-blue {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+.bg-gradient-filipino {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2d2d2d 100%);
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+/* Filipino cuisine decorative elements */
+.filipino-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(249, 115, 22, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, rgba(234, 88, 12, 0.1) 2px, transparent 2px);
+  background-size: 40px 40px;
+}
+
+/* Warm glow effects */
+.glow-orange {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+}
+
+.glow-warm {
+  box-shadow: 0 0 15px rgba(255, 237, 213, 0.4);
 }

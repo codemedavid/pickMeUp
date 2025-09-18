@@ -10,7 +10,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ activeCategory, onCategoryClick }
   const { categories } = useCategories();
 
   return (
-        <div className="sticky top-16 z-40 bg-white/95 backdrop-blur-sm border-b-2 border-gray-200 md:hidden shadow-lg">
+        <div className="sticky top-16 z-40 bg-black/95 backdrop-blur-sm border-b-2 border-orange-600 md:hidden shadow-lg">
       <div className="flex overflow-x-auto scrollbar-hide px-4 py-3">
         {categories.map((category) => (
           <button
@@ -18,8 +18,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ activeCategory, onCategoryClick }
             onClick={() => onCategoryClick(category.id)}
                 className={`flex-shrink-0 flex items-center space-x-2 px-4 py-2 rounded-full mr-3 transition-all duration-200 font-inter ${
                   activeCategory === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-orange-600 text-white'
+                    : 'bg-gray-800 text-white hover:bg-gray-700'
                 }`}
           >
             <span className="text-lg">{category.icon}</span>
