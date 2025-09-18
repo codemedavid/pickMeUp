@@ -80,11 +80,11 @@ ${serviceType === 'delivery' ? `🛵 DELIVERY FEE:` : ''}
 
 ${notes ? `📝 Notes: ${notes}` : ''}
 
-Please confirm this order to proceed. Thank you for choosing Pick-Me-Up! ☕
+Please confirm this order to proceed. Thank you for choosing JAMBayan! ☕
     `.trim();
 
     const encodedMessage = encodeURIComponent(orderDetails);
-    const messengerUrl = `https://m.me/100082987099531?text=${encodedMessage}`;
+    const messengerUrl = `https://m.me/100089075651508?text=${encodedMessage}`;
     
     window.open(messengerUrl, '_blank');
     
