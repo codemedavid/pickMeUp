@@ -1,7 +1,7 @@
 /*
   # Pick-Me-Up Cafe Menu Migration
   
-  This migration replaces the old Nom Sum menu with the new Pick-Me-Up cafe menu.
+  This migration replaces the old JAMBayan menu with the new Pick-Me-Up cafe menu.
   
   1. Clear existing menu data
   2. Add Pick-Me-Up categories

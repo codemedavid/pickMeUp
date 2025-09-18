@@ -46,7 +46,7 @@ const Checkout: React.FC<CheckoutProps> = ({ cartItems, totalPrice, onBack }) =>
       : '';
     
     const orderDetails = `
-🛒 NOM SUM ORDER
+🛒 JAMBayan ORDER
 
 👤 Customer: ${customerName}
 📞 Contact: ${contactNumber}
